@@ -1,0 +1,92 @@
+{
+    "Received": "by 10.159.36.111 with HTTP; Wed, 31 Aug 2016 13:52:08 -0700 (PDT)",
+    "stripped-signature": "",
+    "From": "Docker Notify <no-reply@notify.docker.com>",
+    "X-Envelope-From": "<no-reply@notify.docker.com>",
+    "recipients": "dockerhub@notifications.domain.tld",
+    "X-Google-Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=1e100.net; s=20130820;        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;        bh=mh8Y6W2HqOMo2y75revb4uvzUOKsWoeabsuU5I2tA6c=;        b=XjAi2eyhoKNqT8cY4CSyWDd8YBjtSdvNPCO43SF0kzAUPzH7EI3gc6dqOMmJwXHqgA         z5EgS4NaJarYrTIDmV3+w42mpccqv+bqVmFbXWsGSSNEMnW8gaDlVq0ckSwHkbVmogOm         Ne447o8wbI5mOSxchuPfRHseD0MN4KWmRiHnpWl7aawA4ADDqB79cSJzn8Z2LCwM3uyw         CuoX3UngLt3UURf45xm\/emIsNgdyBkfp6Tdd3BaLHBl3KeeLRJELIu8W+PFYtOogV16T         eR6FtOkpXZwT3j9gZ6WbYTzd93uw+j9xamWhvTo4RQY\/uYZVjFsZMcYaJVGnxQPUam7Q         Qdyw==",
+    "To": "dockerhub@notifications.domain.tld",
+    "message-headers": [
+        [
+            "X-Mailgun-Incoming",
+            "Yes"
+        ],
+        [
+            "X-Envelope-From",
+            "<no-reply@notify.docker.com>"
+        ],
+        [
+            "Received",
+            "from mail-ua0-f180.google.com (mail-ua0-f180.google.com [209.85.217.180]) by mxa.mailgun.org with ESMTP id 57c7437a.7fa164412130-in3; Wed, 31 Aug 2016 20:52:10 -0000 (UTC)"
+        ],
+        [
+            "Received",
+            "by mail-ua0-f180.google.com with SMTP id l94so110731231ual.0        for <dockerhub@notifications.domain.tld>; Wed, 31 Aug 2016 13:52:09 -0700 (PDT)"
+        ],
+        [
+            "Dkim-Signature",
+            "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=espace-win-org.20150623.gappssmtp.com; s=20150623;        h=mime-version:from:date:message-id:subject:to;        bh=mh8Y6W2HqOMo2y75revb4uvzUOKsWoeabsuU5I2tA6c=;        b=Ojs\/SXj3CLGS8ROxh2xUVkXDsYl2mnm0ICZ3FXvMOeny3d5RhwJNKOP7SN+9uEOabQ         Jb3RRfa2lslO7KGI\/Te\/y0+JaC7ZHFv3DwEUY\/12hULQLgX06Kn7Af6W7jWsJinvtfmg         CFrAOmCxkS16yURsVsgDsrMDbmm6myAVSUKqnvNK7zWG1\/FKJMlH0FRtJFs1C5AuIOKq         MLODcNY8bIP0RY9ipr116MAs60WoeCAM4NbSsJacjC4Rbc8RMdWH0Uc2t9C7wlGTIhcS         f2V4TIVA1ijvt1R7ePOfrECVyYf\/xHvmQPgAdJ+\/iwv70isSwfgsUW\/V8VEG4HD1LhEo         oHqA=="
+        ],
+        [
+            "X-Google-Dkim-Signature",
+            "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=1e100.net; s=20130820;        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;        bh=mh8Y6W2HqOMo2y75revb4uvzUOKsWoeabsuU5I2tA6c=;        b=XjAi2eyhoKNqT8cY4CSyWDd8YBjtSdvNPCO43SF0kzAUPzH7EI3gc6dqOMmJwXHqgA         z5EgS4NaJarYrTIDmV3+w42mpccqv+bqVmFbXWsGSSNEMnW8gaDlVq0ckSwHkbVmogOm         Ne447o8wbI5mOSxchuPfRHseD0MN4KWmRiHnpWl7aawA4ADDqB79cSJzn8Z2LCwM3uyw         CuoX3UngLt3UURf45xm\/emIsNgdyBkfp6Tdd3BaLHBl3KeeLRJELIu8W+PFYtOogV16T         eR6FtOkpXZwT3j9gZ6WbYTzd93uw+j9xamWhvTo4RQY\/uYZVjFsZMcYaJVGnxQPUam7Q         Qdyw=="
+        ],
+        [
+            "X-Gm-Message-State",
+            "AE9vXwPy42uZleQ\/IOiMoGMd57W\/+fLn5kLJ7VAIgP3r2dslZxtBKwG6QXocW99ySghDDOL\/RqP7Al9CDS3Xsw=="
+        ],
+        [
+            "X-Received",
+            "by 10.31.114.140 with SMTP id n134mr6999753vkc.54.1472676729180; Wed, 31 Aug 2016 13:52:09 -0700 (PDT)"
+        ],
+        [
+            "Mime-Version",
+            "1.0"
+        ],
+        [
+            "Received",
+            "by 10.159.36.111 with HTTP; Wed, 31 Aug 2016 13:52:08 -0700 (PDT)"
+        ],
+        [
+            "From",
+            "Docker Notify <no-reply@notify.docker.com>"
+        ],
+        [
+            "Date",
+            "Wed, 31 Aug 2016 22:52:08 +0200"
+        ],
+        [
+            "Message-Id",
+            "<CAKg6iAHgQ4e8etV=gi4pbBueeA-o0Qsv02u1Cp9ZKTH8-tL9xw@mail.gmail.com>"
+        ],
+        [
+            "Subject",
+            "There's been an issue with your automated build"
+        ],
+        [
+            "To",
+            "dockerhub@notifications.domain.tld"
+        ],
+        [
+            "Content-Type",
+            "text\/plain; charset=\"UTF-8\""
+        ]
+    ],
+    "Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=espace-win-org.20150623.gappssmtp.com; s=20150623;        h=mime-version:from:date:message-id:subject:to;        bh=mh8Y6W2HqOMo2y75revb4uvzUOKsWoeabsuU5I2tA6c=;        b=Ojs\/SXj3CLGS8ROxh2xUVkXDsYl2mnm0ICZ3FXvMOeny3d5RhwJNKOP7SN+9uEOabQ         Jb3RRfa2lslO7KGI\/Te\/y0+JaC7ZHFv3DwEUY\/12hULQLgX06Kn7Af6W7jWsJinvtfmg         CFrAOmCxkS16yURsVsgDsrMDbmm6myAVSUKqnvNK7zWG1\/FKJMlH0FRtJFs1C5AuIOKq         MLODcNY8bIP0RY9ipr116MAs60WoeCAM4NbSsJacjC4Rbc8RMdWH0Uc2t9C7wlGTIhcS         f2V4TIVA1ijvt1R7ePOfrECVyYf\/xHvmQPgAdJ+\/iwv70isSwfgsUW\/V8VEG4HD1LhEo         oHqA==",
+    "content-id-map": {},
+    "subject": "There's been an issue with your automated build",
+    "stripped-html": "<p>Hi Jonh Doe,\r\n\r\nThere seems to have been an issue with your Automated Build\r\n\"acme\/foo\" (VCS repository: acme\/docker-foo)\r\nduring the build step.\r\nYou can find more information on\r\nhttps:\/\/hub.docker.com\/r\/acme\/foo\/builds\/abcdef123456\/<\/p>",
+    "from": "Docker Notify <no-reply@notify.docker.com>",
+    "sender": "no-reply@notify.docker.com",
+    "stripped-text": "Hi Jonh Doe,\r\n\r\nThere seems to have been an issue with your Automated Build\r\n\"acme\/foo\" (VCS repository: acme\/docker-foo)\r\nduring the build step.\r\nYou can find more information on\r\nhttps:\/\/hub.docker.com\/r\/acme\/foo\/builds\/abcdef123456\/",
+    "X-Mailgun-Incoming": "Yes",
+    "X-Received": "by 10.31.114.140 with SMTP id n134mr6999753vkc.54.1472676729180; Wed, 31 Aug 2016 13:52:09 -0700 (PDT)",
+    "X-Gm-Message-State": "AE9vXwPy42uZleQ\/IOiMoGMd57W\/+fLn5kLJ7VAIgP3r2dslZxtBKwG6QXocW99ySghDDOL\/RqP7Al9CDS3Xsw==",
+    "attachments": [],
+    "Mime-Version": "1.0",
+    "Date": "Wed, 31 Aug 2016 22:52:08 +0200",
+    "Message-Id": "<CAKg6iAHgQ4e8etV=gi4pbBueeA-o0Qsv02u1Cp9ZKTH8-tL9xw@mail.gmail.com>",
+    "Content-Type": "text\/plain; charset=\"UTF-8\"",
+    "body-plain": "Hi Jonh Doe,\r\n\r\nThere seems to have been an issue with your Automated Build\r\n\"acme\/foo\" (VCS repository: acme\/docker-foo)\r\nduring the build step.\r\nYou can find more information on\r\nhttps:\/\/hub.docker.com\/r\/acme\/foo\/builds\/abcdef123456\/",
+    "Subject": "There's been an issue with your automated build"
+}

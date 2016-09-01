@@ -1,0 +1,5 @@
+{
+  "repository.callsign": "KMAILGUN",
+  "phabricator.uri": "https://devcentral.nasqueron.org",
+  "unit.engine": "PhpunitTestEngine"
+}
