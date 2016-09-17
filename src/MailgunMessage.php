@@ -5,6 +5,7 @@ namespace Keruald\Mailgun;
 use GuzzleHttp\ClientInterface;
 
 use InvalidArgumentException;
+use stdClass;
 
 class MailgunMessage {
 
@@ -53,10 +54,10 @@ class MailgunMessage {
      * Initializes a new instance of the MailgunMessage object from a payload.
      *
      * @param \GuzzleHttp\Client $client HTTP client
-     * @param object $payload The payload fired by MailGun routing API
+     * @param stdClass $payload The payload fired by MailGun routing API
      * @param string $key The API key to use to fetch the message.
      */
-    public static function loadFromEventPayload (ClientInterface $client, $payload, $key) {
+    public static function loadFromEventPayload (ClientInterface $client, stdClass $payload, $key) {
         $url = self::extractUrlFromEventPayload($payload);
         return new self($client, $url, $key);
     }
@@ -119,10 +120,11 @@ class MailgunMessage {
     /**
      * Extracts the MailGun URL to retrieve a stored message.
      *
+     * @param stdClass $payload The payload fired by MailGun routing API
      * @return string
      * @throw \InvalidArgumentException if payload doesn't contain URL where expected.
      */
-    private static function extractUrlFromEventPayload ($payload) {
+    private static function extractUrlFromEventPayload (stdClass $payload) {
         if (!isset($payload->storage->url)) {
             throw new InvalidArgumentException("The payload should be an object with a storage.url property.");
         }
