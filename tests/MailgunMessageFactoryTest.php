@@ -5,7 +5,7 @@ namespace Keruald\Mailgun\Tests;
 use Keruald\Mailgun\MailgunMessageFactory;
 use Keruald\Mailgun\MailgunMessage;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 use stdClass;
 
@@ -18,7 +18,7 @@ class MailgunMessageFactoryTest extends TestCase {
      */
     private $factory;
 
-    public function setUp () {
+    public function setUp () : void {
         $client = self::mockHttpClient();
         $this->factory = new MailgunMessageFactory($client, "0000");
     }
@@ -34,10 +34,8 @@ class MailgunMessageFactoryTest extends TestCase {
         $this->assertInstanceOf(MailgunMessage::class, $message);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testGetMessageFromPayloadThrowsExceptionWhenPayloadDoesNotContainUrlInformation () {
+        $this->expectException(\InvalidArgumentException::class);
         $this->factory->getMessageFromPayload(new stdClass);
     }
 

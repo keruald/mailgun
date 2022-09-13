@@ -4,7 +4,7 @@ namespace Keruald\Mailgun\Tests;
 
 use Keruald\Mailgun\MailgunMessage;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 use stdClass;
 
 class MailgunMessageTest extends TestCase {
@@ -16,7 +16,7 @@ class MailgunMessageTest extends TestCase {
      */
     private $message;
 
-    public function setUp() {
+    public function setUp() : void {
         $client = self::mockHttpClient();
         $this->message = new MailgunMessage($client, "https://api/msg", "0000");
     }
@@ -36,10 +36,8 @@ class MailgunMessageTest extends TestCase {
         );
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testFetchThrowsExceptionWhenStatusCodeIsNot200 () {
+        $this->expectException(\RuntimeException::class);
         $client = self::mockHttpClientWithCustomResponse(500, null);
         $message = new MailgunMessage($client, "https://api/msg", "0000");
         $message->get();
@@ -55,10 +53,8 @@ class MailgunMessageTest extends TestCase {
         );
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testLoadFromEventPayloadWithWrongPayload () {
+        $this->expectException(\InvalidArgumentException::class);
         $client = self::mockHttpClient();
         $payload = new stdClass;
         MailgunMessage::loadFromEventPayload($client, $payload, "0000");
